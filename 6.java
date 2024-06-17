@@ -1,25 +1,20 @@
-// Print the following pattern for the given number of rows.
-// Pattern for N = 5
-// E
-// D E
-// C D E
-// B C D E
-// A B C D E
+// (Array element from 1 to 100)
+// Count of distinct element
 
-
-import java.util.*;
-import java.io.*;
-public class MyClass {
-    public static void main(String args[]) {
-       Scanner sc=new Scanner(System.in);
-       int n=sc.nextInt();
-       for(int i=0;i<n;i++)
-           {
-               for(int j=i;j>=0;j--)
-                   {
-                       System.out.print((char)(65+n-j-1)+" ");
-                   }
-               System.out.println(); 
-           }
+class CountOfDistinctEle{
+    public static void main(String[] args){
+        int arr[]={1,2,3,1,2,1,4};
+        int disCount=0;
+        for(int i=0;i<arr.length;i++){
+            int count=0;
+            for(int j=0;j<arr.length;j++){
+                if(arr[i]==arr[j]){
+                    count++;
+                }
+            }
+            if(count==1){
+                disCount++;
+            }
+        }System.out.println("Distinct count is "+ disCount);
     }
 }
