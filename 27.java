@@ -42,4 +42,4 @@ class Solution {
             System.out.println(num[queries[i]]);
         }
     }
-}
+}     
